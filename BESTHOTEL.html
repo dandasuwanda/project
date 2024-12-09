@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selamat datang di Best Hotel, tempat terbaik untuk menginap.">
+    <meta name="keywords" content="hotel, penginapan, fasilitas, kolam renang, pusat kebugaran">
+    <title>Best Hotel</title>
+    <style>
+        /* Style untuk header */
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* Membuat ruang antara header dan gambar */
+            align-items: center; /* Menjaga agar gambar dan teks sejajar secara vertikal */
+        }
+
+        /* Style untuk menu navigasi */
+                /* Style untuk menu navigasi */
+        nav {
+            position: relative; /* Mengatur posisi relatif agar z-index bekerja */
+            z-index: 1; /* Pastikan z-index lebih tinggi dari video */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: darkgray;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li ul {
+            left: 100%;
+            top: 0;
+        }
+
+
+        /* Style untuk konten utama dan video (sidebar kiri) */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .leftbar {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .content {
+            flex: 3;
+            padding: 10px;
+        }
+
+        /* Style untuk footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Rasio 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: bisque;
+            padding: 100px;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 10px;
+        }
+
+        /* Style untuk gambar di header */
+       /* Style untuk konten utama dan gambar */
+       .content {
+            flex: 3;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Menampilkan gambar dalam 3 kolom */
+        }
+
+        .content img {
+            width: 350px;
+            height: 180px;
+            border-radius: 8px; /* Menambahkan sedikit lengkungan pada sudut gambar */
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>BEST HOTEL</h1>
+        <img src="https://th.bing.com/th/id/OIP.lmfVZDeEVnxHaRJpy3R9PgHaFj?w=218&h=180&c=7&r=0&o=5&pid=1.7" alt="Logo Best Hotel" class="header-image" height="3500px" width="250px"> 
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Kamar</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul>
+                    <li><a href="#">Petualangan Alam</a></li>
+                    <li>
+                        <a href="#">Kolam Renang</a>
+                        <ul>
+                            <li><a href="#">Sumber Air Panas</a></li>
+                            <li>
+                                <a href="#">Kolam Anak & Dewasa</a>
+                                <ul>
+                                    <li><a href="#">Reguler</a></li>
+                                    <li><a href="#">Premium</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pusat Kebugaran</a></li>
+                    <li><a href="#">Ruang Rapat</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pesan Sekarang</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Sidebar: Video using iframe -->
+        <div class="leftbar">
+            <!-- Tambahkan Video YouTube disini -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2S8b_0yhs8M?si=pyjUeu8gGjYDUEOH" title="Video YouTube" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/6sxNEqcJcY4" title="Video YouTube" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/glUOkq29plE" title="Video YouTube" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Tambahkan Foto disini -->
+        <div class="content">
+            <img src="data:image/jpeg;base64,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" alt="Kamar 1">
+            <img src="https://th.bing.com/th?id=OIP.-nK2l9B6zUPa0zHLkKht5QHaFE&w=302&h=206&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 2">
+            <img src="https://th.bing.com/th?id=OIP.at1USObRYopFZNS4M0e_MwHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 3">
+            <img src="https://th.bing.com/th?id=OIP.vacvl-ueEoLCEPjJ3od1kAHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 4">
+            <img src="https://th.bing.com/th?id=OIP.chB2peAAH2PZvqD1rJYOmwHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 5">
+            <img src="https://th.bing.com/th?id=OIP.YIsMLk1u-KhRt_PZs0cxJgHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 6">
+            <img src="https://th.bing.com/th?id=OIP.aTzFqrYNwS929px0BI3NDAHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 7">
+            <img src="https://th.bing.com/th?id=OIP.eOkRj9bZ8dIFiMHOEezYVQHaEG&w=335&h=186&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 8">
+            <img src="https://th.bing.com/th/id/OIP.OwvK1vCAqwRa5NjM4nSHBAHaE7?w=246&h=180&c=7&r=0&o=5&pid=1.7 " alt="Kamar 9">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copyBest Hotel
+    </footer>
+
+</body>
+</html>
